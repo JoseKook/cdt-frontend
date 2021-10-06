@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3100/api'
+  apiUrl: 'https://cdt-evaluacion.herokuapp.com/api'
 };
 
 /*

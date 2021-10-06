@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3100/api'
+  apiUrl: 'https://cdt-evaluacion.herokuapp.com/api'
 };
