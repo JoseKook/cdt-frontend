@@ -17,13 +17,20 @@ export class NavbarComponent implements OnInit {
     this.items = [
         {
             label: 'Productos',
+            icon: 'pi pi-fw pi-shopping-cart',
             routerLink: '/productos'
         },
         {
             label: 'Plazos',
-            icon: 'pi pi-fw pi-pencil',
+            icon: 'pi pi-fw pi-dollar',
             routerLink: '/plazos'
+        },
+        {
+            label: 'Cotización',
+            icon: 'pi pi-fw pi-check-square',
+            routerLink: '/contizacion'
         }
+
     ];
   }
 

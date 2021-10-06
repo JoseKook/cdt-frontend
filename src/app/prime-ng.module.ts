@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CardModule } from 'primeng/card';
 import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
@@ -18,6 +19,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
   ],
   exports: [
     ButtonModule,
+    CardModule,
     ConfirmDialogModule,
     DialogModule,
     InputTextModule,

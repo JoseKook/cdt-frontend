@@ -1,1 +1,64 @@
-<p>cotizaciones works!</p>
+<h2>Cotización</h2>
+
+<div class="grid p-fluid">
+  <div class="col-6">
+      <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">
+            <i class="pi pi-search"></i>
+          </span>
+          <input  type="text"
+                  (keyup)="buscarProducto($event)"
+                  pInputText placeholder="Buscar producto">
+      </div>
+  </div>
+</div>
+
+<div class="productos">
+  <div class="p-d-flex mb-4" *ngFor="let producto of productosBuscar; let i = index">
+      <p-card styleClass="p-card-shadow">
+        <ng-template pTemplate="title">
+          <button pButton pRipple
+                  type="button"
+                  (click)="abrirModal(producto)"
+                  label=" {{ producto.nombre  }} "
+                  class="p-button-lg p-button-text col-6">
+          </button>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div class="grid">
+
+            <div class="col-2">
+              <b>Descripción: </b>
+            </div>
+            <div class="col-10">
+              {{ producto.descripcion }}
+            </div>
+
+            <div class="col-2">
+              <b>SKU: </b>
+            </div>
+            <div class="col-10">
+              {{ producto.sku }}
+            </div>
+
+            <div class="col-2">
+              <b>Precio: </b>
+            </div>
+            <div class="col-10">
+              {{ producto.precio | currency }}
+            </div>
+
+          </div>
+        </ng-template>
+      </p-card>
+  </div>
+</div>
+
+<p-dialog header="Cotizar un producto"
+          [(visible)]="displayModal"
+          [modal]="true"
+          [style]="{width: '90vh', height: '80vh'}"
+          [draggable]="false"
+          [resizable]="false">
+  <app-agregar-cotizacion></app-agregar-cotizacion>
+</p-dialog>
