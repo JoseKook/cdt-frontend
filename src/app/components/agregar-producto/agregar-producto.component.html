@@ -1,0 +1,51 @@
+<h3>Ingrese sus datos</h3>
+<form (ngSubmit)="enviarFormulario()" [formGroup]="formulario">
+  <div class="p-fluid p-grid p-formgrid">
+      <div class="p-field p-col-12 p-md-4 mb-3">
+        <label for="nombre">Nombre</label>
+          <input  type="text"
+                  inputId="nombre"
+                  pInputText
+                  formControlName="nombre"
+                  pKeyFilter="alpha">
+          <small id="username2-help"
+                  *ngIf="campoEsValido('nombre')"
+                  class="p-error">
+              El nombre es obligatorio.
+          </small>
+
+      </div>
+      <div class="p-field p-col-12 p-md-4 mb-3">
+        <label for="apellido">Apellido</label>
+          <input  type="text"
+                  inputId="apellido"
+                  pInputText
+                  formControlName="apellido"
+                  pKeyFilter="alpha">
+          <small id="username2-help"
+                  *ngIf="campoEsValido('apellido')"
+                  class="p-error">
+              El apellido es obligatorio.
+          </small>
+      </div>
+      <div class="p-field p-col-12 p-md-4 mb-3">
+          <label for="fecha">Fecha de nacimiento</label>
+          <p-calendar	 inputId="fecha"
+                        [appendTo]="calendario"
+                        [yearNavigator]="true"
+                        yearRange="1960:2021"
+                        dateFormat="yy-mm-dd"
+                        [readonlyInput]="true"
+                        formControlName="fecha">
+          </p-calendar>
+          <small *ngIf=" campoEsValido('fecha') "
+                  class="p-error">
+              Debes ser mayor a 18 años.
+          </small>
+      </div>
+      <div #calendario></div>
+      <p-button type="submit"
+                [disabled]=" !formulario.valid "
+                label="Enviar"></p-button>
+  </div>
+</form>
