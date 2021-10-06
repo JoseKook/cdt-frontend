@@ -1,13 +1,14 @@
-html, body
-{
-  margin: 10px;
-  background-color: var(--surface-b);
+html, body{
+  background: var(--surface-b);
   font-family: var( --font-family );
   color: var( --text-color);
 }
 
-.secondary-color
-{
+body{
+  padding: 10px;
+}
+
+.secondary-color{
   color: var(--text-color-secondary);
 }
 

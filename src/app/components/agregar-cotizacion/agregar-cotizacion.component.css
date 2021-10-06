@@ -1,0 +1,12 @@
+.p-dialog-header{
+  padding: 1rem;
+}
+
+input,button{
+  cursor: default;
+}
+
+button.p-button-outlined{
+  width: 12rem !important;
+  text-align: left;
+}

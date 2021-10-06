@@ -1,1 +1,68 @@
-<p>agregar-cotizacion works!</p>
+<h3>Producto</h3>
+<div class="p-fluid grid p-formgrid">
+
+  <!--  Nombre   -->
+  <div class="col-8">
+    <div class="p-inputgroup p-grid">
+        <button pButton pRipple type="button" label="Nombre" class="p-button-outlined"></button>
+        <input type="text" [value]="producto?.nombre" pInputText readonly="readonly">
+    </div>
+  </div>
+
+  <!--  SKU   -->
+  <div class="col-8">
+    <div class="p-inputgroup p-grid">
+        <button pButton pRipple type="button" label="SKU" class="p-button-outlined"></button>
+        <input type="text" [value]="producto?.sku" pInputText readonly="readonly">
+    </div>
+  </div>
+
+  <!--  Precio   -->
+  <div class="col-8">
+    <div class="p-inputgroup p-grid">
+        <button pButton pRipple type="button" label="Precio" class="p-button-outlined"></button>
+        <input type="text" [value]="producto?.precio | currency" class="numero" pInputText readonly="readonly">
+    </div>
+  </div>
+
+</div>
+
+
+
+<h3>Plazo</h3>
+<div class="p-fluid grid p-formgrid">
+
+  <!--  Plazo  -->
+  <div class="p-field col-8 mb-3">
+    <p-dropdown [options]="plazos"
+                name="plazo"
+                [(ngModel)]="valorPlazoSelect"
+                (onChange)="seleccionaPlazo($event)"
+                optionLabel="nombre"
+                optionValue="_id">
+    </p-dropdown>
+  </div>
+
+</div>
+
+
+<h3 *ngIf=" plazoSeleccionado._id !== ''">Cotización</h3>
+<div class="p-fluid grid p-formgrid" *ngIf=" plazoSeleccionado._id !== ''">
+
+  <!--  Abono Normal   -->
+  <div class="col-8">
+    <div class="p-inputgroup p-grid">
+        <button pButton pRipple type="button" label="Abono Normal" class="p-button-outlined"></button>
+        <input type="text" [value]="abono_normal | currency" class="numero" pInputText readonly="readonly">
+    </div>
+  </div>
+
+  <!--  Abono Puntual   -->
+  <div class="col-8">
+    <div class="p-inputgroup p-grid">
+        <button pButton pRipple type="button" label="Abono Puntual" class="p-button-outlined"></button>
+        <input type="text" [value]="abono_puntual | currency" class="numero" pInputText readonly="readonly">
+    </div>
+  </div>
+
+</div>

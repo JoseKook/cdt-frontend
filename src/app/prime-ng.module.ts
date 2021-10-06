@@ -10,6 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     CardModule,
     ConfirmDialogModule,
     DialogModule,
+    DropdownModule,
     InputTextModule,
     KeyFilterModule,
     MenubarModule,
