@@ -1,4 +1,4 @@
-<h3>Datos del producto</h3>
+<h3>Datos del plazo</h3>
 <form (ngSubmit)="submitFormulario()" [formGroup]="formulario">
   <div class="p-fluid p-grid p-formgrid">
 
@@ -16,47 +16,49 @@
           </small>
       </div>
 
-      <!--  Descripción  -->
+      <!--  Semanas  -->
       <div class="p-field p-col-12 p-md-4 mb-3">
-        <label for="descripcion">Descripción</label>
+        <label for="semanas">Semanas</label>
           <input  type="text"
-                  inputId="descripcion"
+                  inputId="semanas"
                   pInputText
-                  formControlName="descripcion">
-          <small id="username2-help"
-                  *ngIf="campoEsValido('descripcion')"
-                  class="p-error">
-              La descripcion es obligatoria.
-          </small>
-      </div>
-
-      <!--  SKU  -->
-      <div class="p-field p-col-12 p-md-4 mb-3">
-        <label for="sku">SKU</label>
-          <input  type="text"
-                  inputId="sku"
-                  [style]="{'text-transform': 'uppercase'}"
-                  pInputText
-                  formControlName="sku">
-          <small id="username2-help"
-                  *ngIf="campoEsValido('sku')"
-                  class="p-error">
-              La sku es obligatoria.
-          </small>
-      </div>
-
-      <!--  Precio  -->
-      <div class="p-field p-col-12 p-md-4 mb-3">
-        <label for="precio">Precio</label>
-          <input  type="text"
-                  inputId="precio"
-                  pInputText
-                  formControlName="precio"
+                  formControlName="semanas"
                   pKeyFilter="num">
           <small id="username2-help"
-                  *ngIf="campoEsValido('precio')"
+                  *ngIf="campoEsValido('semanas')"
                   class="p-error">
-              El precio es obligatorio.
+              El número de semanas es obligatorio.
+          </small>
+      </div>
+
+      <!--  Abono normal  -->
+      <div class="p-field p-col-12 p-md-4 mb-3">
+        <label for="abono_normal">Abono normal</label>
+          <input  type="text"
+                  inputId="abono_normal"
+                  [style]="{'text-transform': 'uppercase'}"
+                  pInputText
+                  formControlName="abono_normal"
+                  pKeyFilter="num">
+          <small id="username2-help"
+                  *ngIf="campoEsValido('abono_normal')"
+                  class="p-error">
+              El abono normal es obligatorio.
+          </small>
+      </div>
+
+      <!--  Abono puntual  -->
+      <div class="p-field p-col-12 p-md-4 mb-3">
+        <label for="abono_puntual">Abono puntual</label>
+          <input  type="text"
+                  inputId="abono_puntual"
+                  pInputText
+                  formControlName="abono_puntual"
+                  pKeyFilter="num">
+          <small id="username2-help"
+                  *ngIf="campoEsValido('abono_puntual')"
+                  class="p-error">
+              El abono puntual es obligatorio.
           </small>
       </div>
 

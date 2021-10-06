@@ -9,6 +9,7 @@ import { PlazosComponent } from './plazos/plazos.component';
 import { PrimeNGModule } from '../prime-ng.module';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
+import { AgregarPlazoComponent } from './agregar-plazo/agregar-plazo.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AgregarProductoComponent } from './agregar-producto/agregar-producto.co
     ProductosComponent,
     PlazosComponent,
     CotizacionesComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    AgregarPlazoComponent
   ],
   exports:[
     NavbarComponent

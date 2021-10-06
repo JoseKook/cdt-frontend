@@ -4,8 +4,8 @@ export interface ProductosResponse {
 
 export interface Producto {
   descripcion: string;
-  _id: string;
+  _id?: string;
   nombre: string;
   sku: string;
-  precio: number;
+  precio: number | null;
 }

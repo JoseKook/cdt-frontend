@@ -10,3 +10,7 @@ html, body
 {
   color: var(--text-color-secondary);
 }
+
+.numero{
+  text-align: right !important;
+}

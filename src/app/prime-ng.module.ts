@@ -5,11 +5,10 @@ import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
-
-
-
-
-
+import { InputTextModule } from 'primeng/inputtext';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 @NgModule({
@@ -19,9 +18,13 @@ import { DialogModule } from 'primeng/dialog';
   ],
   exports: [
     ButtonModule,
+    ConfirmDialogModule,
     DialogModule,
+    InputTextModule,
+    KeyFilterModule,
     MenubarModule,
-    TableModule
+    TableModule,
+    ToastModule
   ]
 })
 export class PrimeNGModule { }
